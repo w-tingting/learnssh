@@ -155,3 +155,7 @@ rsync -avzhP --process tingting@192.168.1.8:/home/tingting/1.txt /home/Ubuntu
 ```
 rsync -avzhP --process /home/Ubuntu/1.txt tingting@192.168.1.8:/home/tingting
 ```
+命令提示查询工具：cheat.sh
+```
+curl cheat.sh/<命令名称>
+```
