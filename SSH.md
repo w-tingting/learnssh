@@ -144,3 +144,14 @@ scp -r username@ip:/var/www/remote_dir/（远程目录） /var/www/local_dir（�
 scp -r local_dir username@ip:remote_dir
 ```
 
+- 文件增量传输方式rsync
+1. 从服务器下载到客户端
+```
+rsync -avzhP --process tingting@192.168.1.8:/home/tingting/1.txt /home/Ubuntu
+```
+其中，`-a`能正确处理软链接，`-v`显示同步过程的详细(verbose)信息，`-z`表示压缩传输，`-h`表示可读(human-readable)，`-P`表示断点续传；--process表示显示进度。
+
+2. 上传到服务器:
+```
+rsync -avzhP --process /home/Ubuntu/1.txt tingting@192.168.1.8:/home/tingting
+```
